@@ -6,17 +6,17 @@ on:
 jobs:
   build:
     runs-on: macos-latest
-      steps:
-        - name: Check out repository code
-          uses: actions/checkout@v3
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v3
 
-        - name: Setup node
-          uses: actions/setup-node@v3
-          with:
-            node-version: 18.x 
+      - name: Setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18.x 
 
-        - name: Install dependencies
-          run: npm install
+      - name: Install dependencies
+        run: npm install
 
-        - name: Build app
-          run: npm run build
+      - name: Build app
+        run: npm run build
